@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Parola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;     /* centra orizzontalmente */
+    background-color: #0a1a2a; /* o il colore che vuoi */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+			color: #ffffff; /* bianco per leggibilità */
+    text-shadow: 0 0 5px #00ff00;
+        }
+
+		h1 {
+    color: #ff4d4d; /* rosso natalizio */
+	-webkit-text-stroke: 1px #00ff00; 
+    text-shadow: 
+        0 0 5px #ff4d4d,
+        0 0 10px #ff4d4d,
+        0 0 15px #00ff00,
+        0 0 20px #00ff00,
+        0 0 30px #ff4d4d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+        input[type="text"] {
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: darkred;
+        }
+
+		#snowCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* così non blocca clic o form */
+    z-index: -1; /* dietro al contenuto */
+	width: 500px;
+}
+.title-img {
+    width: 50px; /* puoi cambiare la dimensione */
+    height: 50px;
+}
+
+    </style>
+</head>
+<body>
+	<canvas id="snowCanvas"></canvas>
+	
+	<!--<img src="albero.png" alt="Decorazione sinistra" class="title-img">-->
+    <h1>Babbo Natale segreto di G.D.M.P.O.P.Q.O.P.A.A.S.</h1>
+
+    <form id="wordForm">
+        <label for="wordInput">chiave pazza segretissima:</label>
+        <input type="text" id="wordInput" name="word" required>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
